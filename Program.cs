@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using WebApplication1.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,11 +6,38 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Add DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Configure MongoDB
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var settings = builder.Configuration.GetSection("MongoDB").Get<MongoDbSettings>();
+    return new MongoClient(settings?.ConnectionString);
+});
+
+builder.Services.AddScoped(sp =>
+{
+    var client = sp.GetRequiredService<IMongoClient>();
+    var settings = builder.Configuration.GetSection("MongoDB").Get<MongoDbSettings>();
+    var database = client.GetDatabase(settings?.DatabaseName);
+    return database;
+});
+
+// Add data migration service
+builder.Services.AddScoped<DataMigration>(sp =>
+{
+    var mongoDb = sp.GetRequiredService<IMongoDatabase>();
+    var mysqlConnectionString = "Server=127.0.0.1;Port=3306;Database=restaurantsupplydb;User=root;Password=;Allow User Variables=True";
+    return new DataMigration(mysqlConnectionString, mongoDb);
+});
 
 var app = builder.Build();
+
+// Run data migration
+/*using (var scope = app.Services.CreateScope())
+{
+    var migration = scope.ServiceProvider.GetRequiredService<DataMigration>();
+    await migration.MigrateAllData();
+}*/
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

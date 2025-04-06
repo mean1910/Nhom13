@@ -112,10 +112,15 @@
                         <tbody>
                             @foreach (var order in ViewBag.RecentOrders ?? new List<dynamic>())
                             {
+                                var totalQuantity = 0;
+                                foreach (var detail in order.OrderDetails)
+                                {
+                                    totalQuantity += detail.Quantity;
+                                }
                                 <tr>
-                                    <td><a href="#" class="text-muted">@order.OrderCode</a></td>
+                                    <td><a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="text-muted">@order.Code</a></td>
                                     <td>@order.SupplierName</td>
-                                    <td>@order.Quantity</td>
+                                    <td>@totalQuantity</td>
                                     <td>
                                         @if (order.Status == "Đã duyệt")
                                         {
@@ -132,7 +137,7 @@
                                         else
                                         {
                                             <span class="d-flex align-items-center gap-2">
-                                                <i class="fas fa-circle text-danger f-10 m-r-5"></i>Từ chối
+                                                <i class="fas fa-circle text-danger f-10 m-r-5"></i>@order.Status
                                             </span>
                                         }
                                     </td>

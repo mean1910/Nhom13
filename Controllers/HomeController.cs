@@ -1,51 +1,75 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
-using WebApplication1.Data;
-using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext _context;
+        private readonly IMongoDatabase _database;
+        private readonly IMongoCollection<Order> _orders;
+        private readonly IMongoCollection<Product> _products;
+        private readonly IMongoCollection<Supplier> _suppliers;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public HomeController(ILogger<HomeController> logger, IMongoDatabase database)
         {
             _logger = logger;
-            _context = context;
+            _database = database;
+            _orders = database.GetCollection<Order>("orders");
+            _products = database.GetCollection<Product>("products");
+            _suppliers = database.GetCollection<Supplier>("suppliers");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            // Dữ liệu mẫu cho thống kê
-            ViewBag.TotalSuppliers = 150;
+            // Lấy tổng số nhà cung cấp
+            var totalSuppliers = await _suppliers.CountDocumentsAsync(FilterDefinition<Supplier>.Empty);
+            ViewBag.TotalSuppliers = totalSuppliers;
             ViewBag.SupplierGrowth = 15.5;
-            ViewBag.NewSuppliers = 20;
-            ViewBag.TotalOrders = 450;
+            ViewBag.NewSuppliers = await _suppliers.CountDocumentsAsync(s => s.CreatedAt >= DateTime.Now.AddDays(-30));
+
+            // Lấy tổng số đơn hàng
+            var totalOrders = await _orders.CountDocumentsAsync(FilterDefinition<Order>.Empty);
+            ViewBag.TotalOrders = totalOrders;
             ViewBag.OrderGrowth = 25.3;
-            ViewBag.NewOrders = 90;
-            ViewBag.TotalAmount = 150000000;
+            ViewBag.NewOrders = await _orders.CountDocumentsAsync(o => o.OrderDate >= DateTime.Now.AddDays(-30));
+
+            // Lấy tổng số tiền
+            var allOrders = await _orders.Find(_ => true).ToListAsync();
+            var totalAmount = allOrders.Sum(o => o.TotalAmount);
+            ViewBag.TotalAmount = totalAmount;
             ViewBag.AmountGrowth = 30.2;
-            ViewBag.NewAmount = 35000000;
-            ViewBag.TotalProducts = 1200;
+            ViewBag.NewAmount = allOrders.Where(o => o.OrderDate >= DateTime.Now.AddDays(-30)).Sum(o => o.TotalAmount);
+
+            // Lấy tổng số sản phẩm
+            var totalProducts = await _products.CountDocumentsAsync(FilterDefinition<Product>.Empty);
+            ViewBag.TotalProducts = totalProducts;
             ViewBag.ProductGrowth = 18.7;
-            ViewBag.NewProducts = 200;
-            ViewBag.WeeklyRevenue = 25000000;
+            ViewBag.NewProducts = await _products.CountDocumentsAsync(p => p.CreatedAt >= DateTime.Now.AddDays(-30));
+
+            // Thống kê khác
+            ViewBag.WeeklyRevenue = allOrders.Where(o => o.OrderDate >= DateTime.Now.AddDays(-7)).Sum(o => o.TotalAmount);
             ViewBag.RevenueGrowth = 45.14;
             ViewBag.ExpenseRatio = 0.58;
             ViewBag.BusinessRisk = "Thấp";
 
-            // Dữ liệu mẫu cho đơn hàng gần đây
-            ViewBag.RecentOrders = new[]
+            // Lấy đơn hàng gần đây
+            var recentOrders = await _orders
+                .Find(_ => true)
+                .SortByDescending(o => o.OrderDate)
+                .Limit(5)
+                .ToListAsync();
+
+            // Lấy thông tin nhà cung cấp cho mỗi đơn hàng
+            foreach (var order in recentOrders)
             {
-                new { OrderCode = "DH001", SupplierName = "Công ty A", Quantity = 100, Status = "Đã duyệt", TotalAmount = 15000000 },
-                new { OrderCode = "DH002", SupplierName = "Công ty B", Quantity = 50, Status = "Chờ duyệt", TotalAmount = 7500000 },
-                new { OrderCode = "DH003", SupplierName = "Công ty C", Quantity = 200, Status = "Từ chối", TotalAmount = 30000000 },
-                new { OrderCode = "DH004", SupplierName = "Công ty D", Quantity = 75, Status = "Đã duyệt", TotalAmount = 11250000 },
-                new { OrderCode = "DH005", SupplierName = "Công ty E", Quantity = 150, Status = "Chờ duyệt", TotalAmount = 22500000 }
-            };
+                var supplier = await _suppliers.Find(s => s.Id == order.SupplierId).FirstOrDefaultAsync();
+                order.SupplierName = supplier?.Name;
+            }
+
+            ViewBag.RecentOrders = recentOrders;
 
             return View();
         }
