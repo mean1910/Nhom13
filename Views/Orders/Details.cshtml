@@ -1,4 +1,4 @@
-@model WebApplication1.Models.Order
+@model Nhom13.Models.Order
 
 @{
     ViewData["Title"] = "Chi tiết đơn hàng";
@@ -10,35 +10,35 @@
     <div class="row">
         <div class="col-md-6">
             <dl class="row">
-                <dt class="col-sm-4">Mã đơn hàng</dt>
-                <dd class="col-sm-8">@Model.Code</dd>
+                <dt class="col-sm-4">Khách hàng</dt>
+                <dd class="col-sm-8">@Model.CustomerName</dd>
 
-                <dt class="col-sm-4">Nhà cung cấp</dt>
-                <dd class="col-sm-8">@Model.SupplierName</dd>
+                <dt class="col-sm-4">Số điện thoại</dt>
+                <dd class="col-sm-8">@Model.CustomerPhone</dd>
 
-                <dt class="col-sm-4">Ngày đặt</dt>
-                <dd class="col-sm-8">@Model.OrderDate.ToString("dd/MM/yyyy")</dd>
+                <dt class="col-sm-4">Email</dt>
+                <dd class="col-sm-8">@Model.CustomerEmail</dd>
 
-                <dt class="col-sm-4">Ngày giao dự kiến</dt>
-                <dd class="col-sm-8">@(Model.ExpectedDeliveryDate?.ToString("dd/MM/yyyy") ?? "-")</dd>
+                <dt class="col-sm-4">Địa chỉ</dt>
+                <dd class="col-sm-8">@Model.CustomerAddress</dd>
 
-                <dt class="col-sm-4">Ngày giao thực tế</dt>
-                <dd class="col-sm-8">@(Model.ActualDeliveryDate?.ToString("dd/MM/yyyy") ?? "-")</dd>
+                <dt class="col-sm-4">Ngày tạo</dt>
+                <dd class="col-sm-8">@Model.CreatedDate.ToString("dd/MM/yyyy")</dd>
 
                 <dt class="col-sm-4">Trạng thái</dt>
                 <dd class="col-sm-8">
                     <span class="badge badge-@(Model.Status switch {
-                        "Chờ duyệt" => "warning",
-                        "Đã duyệt" => "info",
-                        "Đang giao" => "primary",
-                        "Đã giao" => "success",
-                        "Đã hủy" => "danger",
+                        "Pending" => "warning",
+                        "Processing" => "info",
+                        "Shipping" => "primary",
+                        "Completed" => "success",
+                        "Cancelled" => "danger",
                         _ => "secondary"
                     })">@Model.Status</span>
                 </dd>
 
-                <dt class="col-sm-4">Ghi chú</dt>
-                <dd class="col-sm-8">@(string.IsNullOrEmpty(Model.Notes) ? "-" : Model.Notes)</dd>
+                <dt class="col-sm-4">Người tạo</dt>
+                <dd class="col-sm-8">@(string.IsNullOrEmpty(Model.CreatedBy) ? "-" : Model.CreatedBy)</dd>
             </dl>
         </div>
     </div>

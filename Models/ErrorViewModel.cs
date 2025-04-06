@@ -1,4 +1,4 @@
-namespace WebApplication1.Models
+namespace Nhom13.Models
 {
     public class ErrorViewModel
     {

@@ -1,4 +1,4 @@
-@model IEnumerable<WebApplication1.Models.Order>
+@model IEnumerable<Nhom13.Models.Order>
 
 @{
     ViewData["Title"] = "Danh sách đơn hàng";
@@ -15,11 +15,11 @@
         <table id="ordersTable" class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>Mã đơn hàng</th>
-                    <th>Nhà cung cấp</th>
-                    <th>Ngày đặt</th>
-                    <th>Ngày giao dự kiến</th>
-                    <th>Ngày giao thực tế</th>
+                    <th>Khách hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Địa chỉ</th>
+                    <th>Ngày tạo</th>
                     <th>Trạng thái</th>
                     <th>Tổng tiền</th>
                     <th>Thao tác</th>
@@ -29,11 +29,11 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.Code</td>
-                        <td>@item.SupplierName</td>
-                        <td>@item.OrderDate.ToString("dd/MM/yyyy")</td>
-                        <td>@(item.ExpectedDeliveryDate?.ToString("dd/MM/yyyy") ?? "-")</td>
-                        <td>@(item.ActualDeliveryDate?.ToString("dd/MM/yyyy") ?? "-")</td>
+                        <td>@item.CustomerName</td>
+                        <td>@item.CustomerPhone</td>
+                        <td>@item.CustomerEmail</td>
+                        <td>@item.CustomerAddress</td>
+                        <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
                         <td>@item.Status</td>
                         <td>@item.TotalAmount.ToString("N0") VNĐ</td>
                         <td>
@@ -63,7 +63,7 @@
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Vietnamese.json"
                 },
-                "order": [[2, "desc"]], // Sort by OrderDate by default
+                "order": [[4, "desc"]], // Sort by CreatedDate by default
                 "responsive": true
             });
         });

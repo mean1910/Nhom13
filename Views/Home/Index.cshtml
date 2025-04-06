@@ -102,8 +102,8 @@
                     <table class="table table-hover table-borderless mb-0">
                         <thead>
                             <tr>
-                                <th>Mã đơn hàng</th>
-                                <th>Nhà cung cấp</th>
+                                <th>Khách hàng</th>
+                                <th>Số điện thoại</th>
                                 <th>Số lượng</th>
                                 <th>Trạng thái</th>
                                 <th class="text-end">Tổng tiền</th>
@@ -118,26 +118,44 @@
                                     totalQuantity += detail.Quantity;
                                 }
                                 <tr>
-                                    <td><a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="text-muted">@order.Code</a></td>
-                                    <td>@order.SupplierName</td>
+                                    <td><a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="text-muted">@order.CustomerName</a></td>
+                                    <td>@order.CustomerPhone</td>
                                     <td>@totalQuantity</td>
                                     <td>
-                                        @if (order.Status == "Đã duyệt")
+                                        @if (order.Status == "Completed")
                                         {
                                             <span class="d-flex align-items-center gap-2">
-                                                <i class="fas fa-circle text-success f-10 m-r-5"></i>Đã duyệt
+                                                <i class="fas fa-circle text-success f-10 m-r-5"></i>Hoàn thành
                                             </span>
                                         }
-                                        else if (order.Status == "Chờ duyệt")
+                                        else if (order.Status == "Pending")
                                         {
                                             <span class="d-flex align-items-center gap-2">
-                                                <i class="fas fa-circle text-warning f-10 m-r-5"></i>Chờ duyệt
+                                                <i class="fas fa-circle text-warning f-10 m-r-5"></i>Chờ xử lý
+                                            </span>
+                                        }
+                                        else if (order.Status == "Processing")
+                                        {
+                                            <span class="d-flex align-items-center gap-2">
+                                                <i class="fas fa-circle text-info f-10 m-r-5"></i>Đang xử lý
+                                            </span>
+                                        }
+                                        else if (order.Status == "Shipping")
+                                        {
+                                            <span class="d-flex align-items-center gap-2">
+                                                <i class="fas fa-circle text-primary f-10 m-r-5"></i>Đang giao hàng
+                                            </span>
+                                        }
+                                        else if (order.Status == "Cancelled")
+                                        {
+                                            <span class="d-flex align-items-center gap-2">
+                                                <i class="fas fa-circle text-danger f-10 m-r-5"></i>Đã hủy
                                             </span>
                                         }
                                         else
                                         {
                                             <span class="d-flex align-items-center gap-2">
-                                                <i class="fas fa-circle text-danger f-10 m-r-5"></i>@order.Status
+                                                <i class="fas fa-circle text-secondary f-10 m-r-5"></i>@order.Status
                                             </span>
                                         }
                                     </td>

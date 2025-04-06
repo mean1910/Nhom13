@@ -4845,9 +4845,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/WebApplication1.csproj",
+      "projectUniqueName": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/Nhom13.csproj",
+      "projectName": "Nhom13",
+      "projectPath": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/Nhom13.csproj",
       "packagesPath": "/Users/nguyenvanan1/.nuget/packages/",
       "outputPath": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/obj/",
       "projectStyle": "PackageReference",

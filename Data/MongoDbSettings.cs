@@ -1,4 +1,4 @@
-namespace WebApplication1.Data
+namespace Nhom13.Data
 {
     public class MongoDbSettings
     {

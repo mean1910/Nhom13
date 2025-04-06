@@ -1,4 +1,4 @@
-@model WebApplication1.Models.Product
+@model Nhom13.Models.Product
 
 @{
     ViewData["Title"] = "Thêm sản phẩm mới";
@@ -19,16 +19,16 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label asp-for="Code" class="control-label"></label>
-                            <input asp-for="Code" class="form-control" />
-                            <span asp-validation-for="Code" class="text-danger"></span>
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
+                            <label asp-for="Price" class="control-label"></label>
+                            <input asp-for="Price" class="form-control" type="number" min="0" step="1000" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
@@ -36,26 +36,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label asp-for="Unit" class="control-label"></label>
-                            <input asp-for="Unit" class="form-control" />
-                            <span asp-validation-for="Unit" class="text-danger"></span>
+                            <label asp-for="Quantity" class="control-label"></label>
+                            <input asp-for="Quantity" class="form-control" type="number" min="0" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Price" class="control-label"></label>
-                            <input asp-for="Price" class="form-control" />
-                            <span asp-validation-for="Price" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label asp-for="SupplierId" class="control-label">Nhà cung cấp</label>
-                    <select asp-for="SupplierId" class="form-select" asp-items="@(new SelectList(ViewBag.Suppliers, "Id", "Name"))">
-                        <option value="">-- Chọn nhà cung cấp --</option>
-                    </select>
-                    <span asp-validation-for="SupplierId" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-3">

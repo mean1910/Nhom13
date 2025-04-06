@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Nhom13.props" />
+</Project>

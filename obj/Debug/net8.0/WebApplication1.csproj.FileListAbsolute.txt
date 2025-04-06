@@ -160,3 +160,5 @@
 /Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/bin/Debug/net8.0/SharpCompress.dll
 /Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/bin/Debug/net8.0/Snappier.dll
 /Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/bin/Debug/net8.0/ZstdSharp.dll
+/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/obj/Debug/net8.0/Nhom13.MvcApplicationPartsAssemblyInfo.cs
+/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/obj/Debug/net8.0/Nhom13.MvcApplicationPartsAssemblyInfo.cache

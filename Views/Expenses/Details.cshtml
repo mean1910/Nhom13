@@ -1,0 +1,58 @@
+@model Nhom13.Models.Expense
+
+@{
+    ViewData["Title"] = "Chi tiết chi phí";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">@ViewData["Title"]</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-info-circle me-1"></i>
+            Thông tin chi tiết
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Type)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Type)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Description)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Amount)</dt>
+                <dd class="col-sm-9">@Model.Amount.ToString("N0") VNĐ</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Date)</dt>
+                <dd class="col-sm-9">@Model.Date.ToString("dd/MM/yyyy")</dd>
+
+                @if (!string.IsNullOrEmpty(Model.ProductId))
+                {
+                    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ProductId)</dt>
+                    <dd class="col-sm-9">@ViewBag.ProductName</dd>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Note))
+                {
+                    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Note)</dt>
+                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Note)</dd>
+                }
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CreatedBy)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.CreatedBy)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.CreatedDate)</dt>
+                <dd class="col-sm-9">@Model.CreatedDate.ToString("dd/MM/yyyy HH:mm")</dd>
+            </dl>
+
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                    <i class="fas fa-edit"></i> Sửa
+                </a>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                </a>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/obj/Debug/net8.0/scopedcss/projectbundle/WebApplication1.bundle.scp.css",
-      "PackagePath": "staticwebassets/WebApplication1.bundle.scp.css"
+      "Id": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/obj/Debug/net8.0/scopedcss/projectbundle/Nhom13.bundle.scp.css",
+      "PackagePath": "staticwebassets/Nhom13.bundle.scp.css"
     },
     {
       "Id": "/Users/nguyenvanan1/Documents/annguyen/CCMTPT/Nhom13/wwwroot/assets/css/landing.css",
@@ -3209,20 +3209,20 @@
       "PackagePath": "staticwebassets/widget/w_statistics.html"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Nhom13.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props",
-      "PackagePath": "build\\WebApplication1.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Nhom13.props",
+      "PackagePath": "build\\Nhom13.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props",
-      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Nhom13.props",
+      "PackagePath": "buildMultiTargeting\\Nhom13.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props",
-      "PackagePath": "buildTransitive\\WebApplication1.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Nhom13.props",
+      "PackagePath": "buildTransitive\\Nhom13.props"
     }
   ],
   "ElementsToRemove": []

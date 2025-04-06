@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
-using WebApplication1.Models;
+using Nhom13.Models;
 using MySqlConnector;
 using Dapper;
 using System.Data;
 
-namespace WebApplication1.Data
+namespace Nhom13.Data
 {
     public class DataMigration
     {

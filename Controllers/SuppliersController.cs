@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MongoDB.Bson;
-using WebApplication1.Models;
+using Nhom13.Models;
 
-namespace WebApplication1.Controllers
+namespace Nhom13.Controllers
 {
     public class SuppliersController : Controller
     {

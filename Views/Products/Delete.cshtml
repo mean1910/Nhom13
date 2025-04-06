@@ -1,0 +1,76 @@
+@model Nhom13.Models.Product
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">@ViewData["Title"]</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-trash me-1"></i>
+            Xác nhận xóa
+        </div>
+        <div class="card-body">
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Cảnh báo!</h4>
+                <p>Bạn có chắc chắn muốn xóa sản phẩm này không? Hành động này không thể hoàn tác.</p>
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.Price.ToString("N0") VNĐ
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Model.CreatedDate.ToString("dd/MM/yyyy")
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </dt>
+                <dd class="col-sm-10">
+                    @(string.IsNullOrEmpty(Model.CreatedBy) ? "-" : Model.CreatedBy)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Xác nhận xóa
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                </a>
+            </form>
+        </div>
+    </div>
+</div> 
