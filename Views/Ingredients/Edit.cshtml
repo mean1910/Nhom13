@@ -1,0 +1,123 @@
+@model WebApplication1.Models.Ingredient
+
+@{
+    ViewData["Title"] = "Chỉnh sửa nguyên liệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">
+            <i class="ti ti-edit"></i> Chỉnh sửa nguyên liệu
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="ImagePath" />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="Name" class="form-label">Tên nguyên liệu</label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Unit" class="form-label">Đơn vị tính</label>
+                                <input asp-for="Unit" class="form-control" />
+                                <span asp-validation-for="Unit" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Price" class="form-label">Giá</label>
+                                <div class="input-group">
+                                    <input asp-for="Price" class="form-control" />
+                                    <span class="input-group-text">VNĐ</span>
+                                </div>
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="SupplierId" class="form-label">Nhà cung cấp</label>
+                                <select asp-for="SupplierId" class="form-select" asp-items="ViewBag.SupplierId"></select>
+                                <span asp-validation-for="SupplierId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Description" class="form-label">Mô tả</label>
+                                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label class="form-label d-block">Hình ảnh hiện tại</label>
+                                @if (!string.IsNullOrEmpty(Model.ImagePath))
+                                {
+                                    <img src="@Model.ImagePath" alt="@Model.Name" class="img-thumbnail mb-2" style="max-height: 200px;" />
+                                }
+                                else
+                                {
+                                    <p class="text-muted">Chưa có hình ảnh</p>
+                                }
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="form-label">Thay đổi hình ảnh</label>
+                                <input type="file" name="imageFile" class="form-control" accept="image/*" />
+                                <small class="text-muted">Để trống nếu không muốn thay đổi hình ảnh</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ti ti-device-floppy"></i> Lưu thay đổi
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="ti ti-arrow-back-up"></i> Quay lại
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h6 class="mb-0">Hướng dẫn</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="ti ti-info-circle text-info"></i>
+                                Điền đầy đủ các thông tin bắt buộc (có dấu *)
+                            </li>
+                            <li class="mb-2">
+                                <i class="ti ti-photo text-info"></i>
+                                Hình ảnh nên có kích thước vuông để hiển thị đẹp nhất
+                            </li>
+                            <li>
+                                <i class="ti ti-currency text-info"></i>
+                                Giá nên được nhập không có dấu phẩy
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

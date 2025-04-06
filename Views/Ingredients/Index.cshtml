@@ -1,0 +1,114 @@
+@model IEnumerable<WebApplication1.Models.Ingredient>
+
+@{
+    ViewData["Title"] = "Quản lý nguyên liệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Quản lý nguyên liệu</h5>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="ti ti-plus"></i> Thêm mới
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Index" method="get" class="mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" name="searchString" class="form-control" placeholder="Tìm kiếm..." value="@ViewData["CurrentFilter"]" />
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ti ti-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ImagePath)
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-searchString="@ViewData["CurrentFilter"]">
+                                @Html.DisplayNameFor(model => model.Name)
+                                @if (ViewData["NameSortParm"]?.ToString() == "name_desc")
+                                {
+                                    <i class="ti ti-arrow-down"></i>
+                                }
+                                else
+                                {
+                                    <i class="ti ti-arrow-up"></i>
+                                }
+                            </a>
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Unit)
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParm"]" asp-route-searchString="@ViewData["CurrentFilter"]">
+                                @Html.DisplayNameFor(model => model.Price)
+                                @if (ViewData["PriceSortParm"]?.ToString() == "price_desc")
+                                {
+                                    <i class="ti ti-arrow-down"></i>
+                                }
+                                else
+                                {
+                                    <i class="ti ti-arrow-up"></i>
+                                }
+                            </a>
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Supplier)
+                        </th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImagePath))
+                                {
+                                    <img src="@item.ImagePath" alt="@item.Name" style="max-width: 50px; max-height: 50px;" class="rounded" />
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Unit)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price) VNĐ
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Supplier.Name)
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                        <i class="ti ti-edit"></i>
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                        <i class="ti ti-eye"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                        <i class="ti ti-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

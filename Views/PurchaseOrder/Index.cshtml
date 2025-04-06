@@ -1,0 +1,79 @@
+@model IEnumerable<WebApplication1.Models.PurchaseOrder>
+
+@{
+    ViewData["Title"] = "Quản lý đơn đặt hàng";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo đơn đặt hàng mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã đơn</th>
+            <th>Ngày đặt</th>
+            <th>Nguyên liệu</th>
+            <th>Trạng thái</th>
+            <th>Ghi chú</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <ul class="list-unstyled">
+                        @foreach (var detail in item.OrderDetails)
+                        {
+                            <li>@detail.Ingredient.Name - @detail.Quantity</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    @switch (item.Status)
+                    {
+                        case OrderStatus.Pending:
+                            <span class="badge bg-warning">Chờ duyệt</span>
+                            break;
+                        case OrderStatus.Shipping:
+                            <span class="badge bg-info">Đang giao</span>
+                            break;
+                        case OrderStatus.Completed:
+                            <span class="badge bg-success">Hoàn thành</span>
+                            break;
+                    }
+                </td>
+                <td>@item.Notes</td>
+                <td>
+                    @if (item.Status != OrderStatus.Completed)
+                    {
+                        <div class="btn-group">
+                            @if (item.Status == OrderStatus.Pending)
+                            {
+                                <form asp-action="UpdateStatus" method="post" style="display: inline;">
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <input type="hidden" name="newStatus" value="@OrderStatus.Shipping" />
+                                    <button type="submit" class="btn btn-sm btn-info">Duyệt & Giao hàng</button>
+                                </form>
+                            }
+                            @if (item.Status == OrderStatus.Shipping)
+                            {
+                                <form asp-action="UpdateStatus" method="post" style="display: inline;">
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <input type="hidden" name="newStatus" value="@OrderStatus.Completed" />
+                                    <button type="submit" class="btn btn-sm btn-success">Xác nhận nhận hàng</button>
+                                </form>
+                            }
+                        </div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 
