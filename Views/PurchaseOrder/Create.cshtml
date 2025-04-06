@@ -1,0 +1,102 @@
+@model WebApplication1.Models.PurchaseOrder
+
+@{
+    ViewData["Title"] = "Tạo đơn đặt hàng mới";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create" id="orderForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div id="ingredientList">
+                <div class="ingredient-item mb-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">Nguyên liệu</label>
+                            <select name="ingredientIds" class="form-select">
+                                <option value="">-- Chọn nguyên liệu --</option>
+                                @foreach (var ingredient in ViewBag.Ingredients)
+                                {
+                                    <option value="@ingredient.Id">@ingredient.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Số lượng</label>
+                            <input type="number" name="quantities" class="form-control" min="1" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" class="btn btn-danger form-control remove-ingredient" style="display: none;">Xóa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button type="button" id="addIngredient" class="btn btn-secondary">Thêm nguyên liệu</button>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Ghi chú</label>
+                <textarea name="notes" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tạo đơn</button>
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            // Hiển thị nút xóa cho hàng đầu tiên nếu thêm hàng mới
+            function updateRemoveButtons() {
+                if ($('.ingredient-item').length > 1) {
+                    $('.remove-ingredient').show();
+                } else {
+                    $('.remove-ingredient').hide();
+                }
+            }
+
+            // Thêm hàng nguyên liệu mới
+            $('#addIngredient').click(function () {
+                var newRow = $('.ingredient-item:first').clone();
+                newRow.find('select').val('');
+                newRow.find('input[type="number"]').val('');
+                $('#ingredientList').append(newRow);
+                updateRemoveButtons();
+            });
+
+            // Xóa hàng nguyên liệu
+            $(document).on('click', '.remove-ingredient', function () {
+                $(this).closest('.ingredient-item').remove();
+                updateRemoveButtons();
+            });
+
+            // Validate form trước khi submit
+            $('#orderForm').submit(function (e) {
+                var isValid = false;
+                $('.ingredient-item').each(function () {
+                    var ingredientId = $(this).find('select').val();
+                    var quantity = $(this).find('input[type="number"]').val();
+                    if (ingredientId && quantity > 0) {
+                        isValid = true;
+                    }
+                });
+
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('Vui lòng nhập ít nhất một nguyên liệu với số lượng hợp lệ');
+                }
+            });
+        });
+    </script>
+} 

@@ -1,0 +1,66 @@
+@model WebApplication1.Models.WarehouseIngredient
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin tồn kho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            Chỉnh sửa thông tin tồn kho
+            @if (Model.Ingredient != null)
+            {
+                <span>- @Model.Ingredient.Name</span>
+            }
+        </h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="IngredientId" />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="Quantity" class="form-label"></label>
+                        <div class="input-group">
+                            <input asp-for="Quantity" class="form-control" />
+                            @if (Model.Ingredient != null)
+                            {
+                                <span class="input-group-text">@Model.Ingredient.Unit</span>
+                            }
+                        </div>
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="MinimumQuantity" class="form-label"></label>
+                        <div class="input-group">
+                            <input asp-for="MinimumQuantity" class="form-control" />
+                            @if (Model.Ingredient != null)
+                            {
+                                <span class="input-group-text">@Model.Ingredient.Unit</span>
+                            }
+                        </div>
+                        <span asp-validation-for="MinimumQuantity" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ti ti-device-floppy"></i> Lưu thay đổi
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="ti ti-arrow-back-up"></i> Quay lại
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

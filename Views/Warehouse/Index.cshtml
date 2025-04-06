@@ -1,0 +1,73 @@
+@model IEnumerable<WebApplication1.Models.WarehouseIngredient>
+
+@{
+    ViewData["Title"] = "Quản lý kho";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Quản lý kho nguyên liệu</h5>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.LowStockItems?.Count > 0)
+        {
+            <div class="alert alert-warning">
+                <h6 class="alert-heading">Cảnh báo tồn kho thấp!</h6>
+                <p>Các nguyên liệu sau đang có số lượng dưới mức tối thiểu:</p>
+                <ul class="mb-0">
+                    @foreach (var item in ViewBag.LowStockItems)
+                    {
+                        <li>@item.Ingredient.Name (Hiện tại: @item.Quantity @item.Ingredient.Unit, Tối thiểu: @item.MinimumQuantity @item.Ingredient.Unit)</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nguyên liệu</th>
+                        <th>Đơn vị tính</th>
+                        <th>Số lượng tồn</th>
+                        <th>Mức tồn tối thiểu</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Ingredient.Name</td>
+                            <td>@item.Ingredient.Unit</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.MinimumQuantity</td>
+                            <td>
+                                @if (item.Quantity <= item.MinimumQuantity)
+                                {
+                                    <span class="badge bg-danger">Cần nhập thêm</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">Đủ hàng</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                        <i class="ti ti-edit"></i> Sửa
+                                    </a>
+                                    <a asp-action="AdjustStock" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                                        <i class="ti ti-exchange"></i> Nhập/Xuất
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,54 @@
+@model WebApplication1.Models.Ingredient
+
+@{
+    ViewData["Title"] = "Thêm mới nguyên liệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Thêm mới nguyên liệu</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit" class="control-label"></label>
+                <input asp-for="Unit" class="form-control" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierId" class="control-label">Nhà cung cấp</label>
+                <select asp-for="SupplierId" class="form-select" asp-items="ViewBag.SupplierId"></select>
+                <span asp-validation-for="SupplierId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Hình ảnh</label>
+                <input type="file" name="imageFile" class="form-control" accept="image/*" />
+            </div>
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary"><i class="ti ti-device-floppy"></i> Lưu</button>
+                <a asp-action="Index" class="btn btn-secondary"><i class="ti ti-arrow-back-up"></i> Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 
