@@ -8,10 +8,12 @@ namespace WebApplication1.Controllers
     public class SuppliersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<SuppliersController> _logger;
 
-        public SuppliersController(ApplicationDbContext context)
+        public SuppliersController(ApplicationDbContext context, ILogger<SuppliersController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: Suppliers
@@ -19,46 +21,13 @@ namespace WebApplication1.Controllers
         {
             var query = _context.Suppliers.AsQueryable();
 
-            // Áp dụng tìm kiếm theo từ khóa
             if (!string.IsNullOrEmpty(searchModel.SearchString))
             {
-                query = query.Where(s => 
-                    s.Name.Contains(searchModel.SearchString) ||
-                    s.Phone.Contains(searchModel.SearchString) ||
-                    s.Email.Contains(searchModel.SearchString) ||
-                    s.Address.Contains(searchModel.SearchString)
-                );
+                query = query.Where(s => s.Name.Contains(searchModel.SearchString));
             }
 
-            // Áp dụng lọc theo trạng thái
-            if (searchModel.IsActive.HasValue)
-            {
-                query = query.Where(s => s.IsActive == searchModel.IsActive.Value);
-            }
-
-            // Áp dụng sắp xếp
-            if (!string.IsNullOrEmpty(searchModel.SortBy))
-            {
-                query = searchModel.SortBy.ToLower() switch
-                {
-                    "name" => searchModel.SortOrder == "desc" ? query.OrderByDescending(s => s.Name) : query.OrderBy(s => s.Name),
-                    "phone" => searchModel.SortOrder == "desc" ? query.OrderByDescending(s => s.Phone) : query.OrderBy(s => s.Phone),
-                    "email" => searchModel.SortOrder == "desc" ? query.OrderByDescending(s => s.Email) : query.OrderBy(s => s.Email),
-                    "createdat" => searchModel.SortOrder == "desc" ? query.OrderByDescending(s => s.CreatedAt) : query.OrderBy(s => s.CreatedAt),
-                    _ => query.OrderByDescending(s => s.CreatedAt)
-                };
-            }
-            else
-            {
-                query = query.OrderByDescending(s => s.CreatedAt);
-            }
-
-            // Lấy danh sách nhà cung cấp
-            var suppliers = await query.ToListAsync();
-
-            // Gán lại model tìm kiếm để giữ lại các giá trị đã chọn
+            var suppliers = await query.OrderByDescending(s => s.CreatedAt).ToListAsync();
             ViewBag.SearchModel = searchModel;
-
             return View(suppliers);
         }
 
@@ -87,14 +56,50 @@ namespace WebApplication1.Controllers
         // POST: Suppliers/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Address,Phone,Email,Note")] Supplier supplier)
+        public async Task<IActionResult> Create([Bind("Name,Phone,Email,Address,Note")] Supplier supplier)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(supplier);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    // Kiểm tra xem nhà cung cấp đã tồn tại chưa
+                    var existingSupplier = await _context.Suppliers
+                        .FirstOrDefaultAsync(s => s.Name == supplier.Name || s.Phone == supplier.Phone);
+                    
+                    if (existingSupplier != null)
+                    {
+                        ModelState.AddModelError("", "Nhà cung cấp với tên hoặc số điện thoại này đã tồn tại!");
+                        return View(supplier);
+                    }
+
+                    supplier.CreatedAt = DateTime.Now;
+                    supplier.IsActive = true;
+
+                    _context.Add(supplier);
+                    await _context.SaveChangesAsync();
+
+                    TempData["SuccessMessage"] = "Thêm nhà cung cấp thành công!";
+                    _logger.LogInformation($"Đã thêm nhà cung cấp mới: {supplier.Name}");
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    _logger.LogWarning("Model không hợp lệ khi thêm nhà cung cấp");
+                    foreach (var modelState in ModelState.Values)
+                    {
+                        foreach (var error in modelState.Errors)
+                        {
+                            _logger.LogWarning($"Validation error: {error.ErrorMessage}");
+                        }
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Lỗi khi thêm nhà cung cấp: {ex.Message}");
+                ModelState.AddModelError("", "Có lỗi xảy ra khi thêm nhà cung cấp. Vui lòng thử lại!");
+            }
+
             return View(supplier);
         }
 
@@ -105,6 +110,7 @@ namespace WebApplication1.Controllers
             {
                 return NotFound();
             }
+
             var supplier = await _context.Suppliers.FindAsync(id);
             if (supplier == null)
             {
@@ -116,7 +122,7 @@ namespace WebApplication1.Controllers
         // POST: Suppliers/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Phone,Email,Note,IsActive")] Supplier supplier)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Phone,Email,Address,Note,IsActive")] Supplier supplier)
         {
             if (id != supplier.Id)
             {
@@ -127,8 +133,22 @@ namespace WebApplication1.Controllers
             {
                 try
                 {
-                    _context.Update(supplier);
+                    var existingSupplier = await _context.Suppliers.FindAsync(id);
+                    if (existingSupplier == null)
+                    {
+                        return NotFound();
+                    }
+
+                    existingSupplier.Name = supplier.Name;
+                    existingSupplier.Phone = supplier.Phone;
+                    existingSupplier.Email = supplier.Email;
+                    existingSupplier.Address = supplier.Address;
+                    existingSupplier.Note = supplier.Note;
+                    existingSupplier.IsActive = supplier.IsActive;
+
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Cập nhật nhà cung cấp thành công!";
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -141,7 +161,6 @@ namespace WebApplication1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(supplier);
         }

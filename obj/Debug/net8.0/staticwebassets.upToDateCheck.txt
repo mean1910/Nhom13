@@ -594,6 +594,7 @@ wwwroot\assets\json\typehead\countries.json
 wwwroot\assets\json\typehead\movies.json
 wwwroot\assets\json\typehead\nba.json
 wwwroot\assets\json\typehead\nhl.json
+wwwroot\css\ingredient-details.css
 wwwroot\css\site.css
 wwwroot\chart\chart-apex.html
 wwwroot\chart\map-vector.html
@@ -765,6 +766,10 @@ wwwroot\pages\price.html
 wwwroot\pages\register.html
 wwwroot\pages\reset-password.html
 wwwroot\pages\under-construction.html
+wwwroot\pictures\dau-an.jpg
+wwwroot\pictures\tieu-en.jpeg
+wwwroot\pictures\tieu-en.jpg
+wwwroot\pictures\thit-ga.png
 wwwroot\table\dt_advance.html
 wwwroot\table\dt_api.html
 wwwroot\table\dt_basic.html
