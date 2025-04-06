@@ -2,122 +2,76 @@
 @using WebApplication1.Models
 
 @{
-    ViewData["Title"] = "Quản lý nhà cung cấp";
-    var searchModel = ViewBag.SearchModel as SupplierSearchViewModel ?? new SupplierSearchViewModel();
+    ViewData["Title"] = "Danh sách nhà cung cấp";
 }
 
 <div class="container-fluid">
-    <h1 class="mt-4">@ViewData["Title"]</h1>
-
-    <!-- [ Tìm kiếm và lọc ] start -->
-    <div class="card mb-4">
-        <div class="card-header">
-            <i class="ti ti-search me-1"></i>
-            Tìm kiếm và lọc
-        </div>
-        <div class="card-body">
-            <form asp-action="Index" method="get" class="row g-3">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label asp-for="@searchModel.SearchString" class="form-label"></label>
-                        <input asp-for="@searchModel.SearchString" class="form-control" placeholder="Nhập từ khóa tìm kiếm..." />
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label asp-for="@searchModel.IsActive" class="form-label"></label>
-                        <select asp-for="@searchModel.IsActive" class="form-select">
-                            <option value="">Tất cả</option>
-                            <option value="true">Hoạt động</option>
-                            <option value="false">Không hoạt động</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label asp-for="@searchModel.SortBy" class="form-label"></label>
-                        <select asp-for="@searchModel.SortBy" class="form-select">
-                            <option value="">Mặc định</option>
-                            <option value="name">Tên nhà cung cấp</option>
-                            <option value="phone">Số điện thoại</option>
-                            <option value="email">Email</option>
-                            <option value="createdat">Ngày tạo</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label asp-for="@searchModel.SortOrder" class="form-label"></label>
-                        <select asp-for="@searchModel.SortOrder" class="form-select">
-                            <option value="asc">Tăng dần</option>
-                            <option value="desc">Giảm dần</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="ti ti-search"></i> Tìm kiếm
-                    </button>
-                    <a asp-action="Index" class="btn btn-secondary">
-                        <i class="ti ti-refresh"></i> Làm mới
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title">Danh sách nhà cung cấp</h4>
+                    <a asp-action="Create" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Thêm mới
                     </a>
                 </div>
-            </form>
-        </div>
-    </div>
+                <div class="card-body">
+                    <form asp-action="Index" method="get" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" name="SearchString" class="form-control" placeholder="Nhập tên nhà cung cấp..." value="@ViewBag.SearchModel?.SearchString">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Tìm kiếm
+                            </button>
+                        </div>
+                    </form>
 
-    <!-- [ Danh sách nhà cung cấp ] start -->
-    <div class="card">
-        <div class="card-header">
-            <i class="ti ti-list me-1"></i>
-            Danh sách nhà cung cấp
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-hover table-borderless mb-0">
-                    <thead>
-                        <tr>
-                            <th>@Html.DisplayNameFor(model => model.Name)</th>
-                            <th>@Html.DisplayNameFor(model => model.Phone)</th>
-                            <th>@Html.DisplayNameFor(model => model.Email)</th>
-                            <th>@Html.DisplayNameFor(model => model.Address)</th>
-                            <th>@Html.DisplayNameFor(model => model.IsActive)</th>
-                            <th>Thao tác</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Phone)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Address)</td>
-                                <td>
-                                    @if (item.IsActive)
-                                    {
-                                        <span class="badge bg-success">Hoạt động</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-danger">Không hoạt động</span>
-                                    }
-                                </td>
-                                <td>
-                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
-                                        <i class="ti ti-edit"></i>
-                                    </a>
-                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                                        <i class="ti ti-info-circle"></i>
-                                    </a>
-                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
-                                        <i class="ti ti-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Phone)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Address)</th>
+                                    <th>@Html.DisplayNameFor(model => model.IsActive)</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                                        <td>
+                                            @if (item.IsActive)
+                                            {
+                                                <span class="badge bg-success">Hoạt động</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-danger">Không hoạt động</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                                <i class="fas fa-info-circle"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

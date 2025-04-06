@@ -12,32 +12,32 @@
   <meta name="author" content="CodedThemes">
 
   <!-- [Favicon] icon -->
-  <link rel="icon" href="~/assets/images/favicon.svg" type="image/x-icon">
+  <link rel="icon" href="~/assets/images/favicon.svg" type="image/x-icon" asp-append-version="true">
 
   <!-- [Google Font] Family -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
 
-  <!-- [Tabler Icons] https://tablericons.com -->
-  <link rel="stylesheet" href="~/assets/fonts/tabler-icons.min.css">
+<!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="~/assets/fonts/tabler-icons.min.css" asp-append-version="true">
 
-  <!-- [Feather Icons] https://feathericons.com -->
-  <link rel="stylesheet" href="~/assets/fonts/feather.css">
+<!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="~/assets/fonts/feather.css" asp-append-version="true">
 
-  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-  <link rel="stylesheet" href="~/assets/fonts/fontawesome.css">
+<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="~/assets/fonts/fontawesome.css" asp-append-version="true">
 
-  <!-- [Material Icons] https://fonts.google.com/icons -->
-  <link rel="stylesheet" href="~/assets/fonts/material.css">
+<!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="~/assets/fonts/material.css" asp-append-version="true">
 
-  <!-- [Template CSS Files] -->
-  <link rel="stylesheet" href="~/assets/css/style.css" id="main-style-link">
-  <link rel="stylesheet" href="~/assets/css/style-preset.css">
+<!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="~/assets/css/style.css" id="main-style-link" asp-append-version="true">
+  <link rel="stylesheet" href="~/assets/css/style-preset.css" asp-append-version="true">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="~/assets/fonts/tabler-icons.min.css" />
   <link rel="stylesheet" href="~/assets/css/style.css" />
@@ -53,153 +53,134 @@
 
 <body>
   <!-- [ Pre-loader ] start -->
-  <div class="loader-bg">
-    <div class="loader-track">
-      <div class="loader-fill"></div>
-    </div>
+<div class="loader-bg">
+  <div class="loader-track">
+    <div class="loader-fill"></div>
   </div>
-  <!-- [ Pre-loader ] End -->
+</div>
+<!-- [ Pre-loader ] End -->
 
-  <!-- [ Sidebar Menu ] start -->
-  <nav class="pc-sidebar">
-    <div class="navbar-wrapper">
-      <div class="m-header">
-        <a href="/" class="b-brand text-primary">
-          <img src="~/assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
-        </a>
-      </div>
-      <div class="navbar-content">
-        <ul class="pc-navbar">
-          <li class="pc-item">
+ <!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+        <a asp-controller="Home" asp-action="Index" class="b-brand">
+          <!-- Logo text -->
+          <span class="b-title" style="font-size: 1.5rem; font-weight: bold; color: #4680ff;">Restaurant</span>
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        <li class="pc-item">
             <a asp-controller="Home" asp-action="Index" class="pc-link">
-              <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+            <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
               <span class="pc-mtext">Trang chủ</span>
-            </a>
-          </li>
+          </a>
+        </li>
 
-          <li class="pc-item pc-caption">
+        <li class="pc-item pc-caption">
             <label>Quản lý</label>
             <i class="ti ti-settings"></i>
-          </li>
-          <li class="pc-item">
+        </li>
+        <li class="pc-item">
             <a asp-controller="Suppliers" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-truck"></i></span>
               <span class="pc-mtext">Nhà cung cấp</span>
-            </a>
-          </li>
-          <li class="pc-item">
+          </a>
+        </li>
+        <li class="pc-item">
             <a asp-controller="Ingredients" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-truck"></i></span>
               <span class="pc-mtext">Nguyên liệu</span>
-            </a>
-          </li>
-          <li class="pc-item">
+          </a>
+        </li>
+        <li class="pc-item">
             <a asp-controller="Products" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-box"></i></span>
               <span class="pc-mtext">Sản phẩm</span>
-            </a>
-          </li>
-          <li class="pc-item">
+          </a>
+        </li>
+        <li class="pc-item">
             <a asp-controller="PurchaseOrder" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-shopping-cart"></i></span>
               <span class="pc-mtext">Đơn hàng</span>
-            </a>
-          </li>
-          <li class="pc-item">
+          </a>
+        </li>
+        <li class="pc-item">
             <a asp-controller="Warehouse" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-package"></i></span>
               <span class="pc-mtext">Kho</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+          </a>
+        </li>
+        @if (User.IsInRole("Admin"))
+        {
+        <li class="pc-item pc-caption">
+                <label>Hệ thống</label>
+                <i class="ti ti-settings"></i>
+        </li>
+        <li class="pc-item">
+                <a asp-controller="Account" asp-action="Index" class="pc-link">
+                    <span class="pc-micon"><i class="ti ti-users"></i></span>
+                    <span class="pc-mtext">Quản lý người dùng</span>
+          </a>
+        </li>
+        }
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   <!-- [ Sidebar Menu ] end -->
 
   <!-- [ Header Topbar ] start -->
-  <header class="pc-header">
+<header class="pc-header">
     <div class="header-wrapper">
       <!-- [Mobile Media Block] start -->
-      <div class="me-auto pc-mob-drp">
-        <ul class="list-unstyled">
-          <li class="pc-h-item pc-sidebar-collapse">
-            <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
-              <i class="ti ti-menu-2"></i>
-            </a>
-          </li>
-          <li class="pc-h-item pc-sidebar-popup">
-            <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
-              <i class="ti ti-menu-2"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- [Mobile Media Block end] -->
-      <div class="ms-auto">
-        <ul class="list-unstyled">
-          <li class="dropdown pc-h-item header-user-profile">
+<div class="me-auto pc-mob-drp">
+  <ul class="list-unstyled">
+    <li class="pc-h-item pc-sidebar-collapse">
+      <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
+        <i class="ti ti-menu-2"></i>
+      </a>
+    </li>
+    <li class="pc-h-item pc-sidebar-popup">
+      <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
+        <i class="ti ti-menu-2"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- [Mobile Media Block end] -->
+<div class="ms-auto">
+  <ul class="list-unstyled">
+    <li class="dropdown pc-h-item header-user-profile">
             <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" data-bs-auto-close="outside" aria-expanded="false">
               <img src="~/assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
-              <span>Admin</span>
-            </a>
-            <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
-              <div class="dropdown-header">
-                <div class="d-flex mb-1">
-                  <div class="flex-shrink-0">
+              <span>@User.FindFirst("FullName")?.Value</span>
+      </a>
+      <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header">
+          <div class="d-flex mb-1">
+            <div class="flex-shrink-0">
                     <img src="~/assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar wid-35">
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <h6 class="mb-1">Admin</h6>
-                    <span>Quản trị viên</span>
-                  </div>
-                </div>
-              </div>
-              <ul class="nav drp-tabs nav-fill nav-tabs" id="mydrpTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="drp-t1" data-bs-toggle="tab" data-bs-target="#drp-tab-1" type="button" role="tab" aria-controls="drp-tab-1" aria-selected="true">
-                    <i class="ti ti-user"></i> Hồ sơ
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="drp-t2" data-bs-toggle="tab" data-bs-target="#drp-tab-2" type="button" role="tab" aria-controls="drp-tab-2" aria-selected="false">
-                    <i class="ti ti-settings"></i> Cài đặt
-                  </button>
-                </li>
-              </ul>
-              <div class="tab-content" id="mysrpTabContent">
-                <div class="tab-pane fade show active" id="drp-tab-1" role="tabpanel" aria-labelledby="drp-t1" tabindex="0">
-                  <a href="#!" class="dropdown-item">
-                    <i class="ti ti-edit-circle"></i>
-                    <span>Sửa hồ sơ</span>
-                  </a>
-                  <a href="#!" class="dropdown-item">
-                    <i class="ti ti-user"></i>
-                    <span>Xem hồ sơ</span>
-                  </a>
-                  <a href="#!" class="dropdown-item">
-                    <i class="ti ti-power"></i>
-                    <span>Đăng xuất</span>
-                  </a>
-                </div>
-                <div class="tab-pane fade" id="drp-tab-2" role="tabpanel" aria-labelledby="drp-t2" tabindex="0">
-                  <a href="#!" class="dropdown-item">
-                    <i class="ti ti-help"></i>
-                    <span>Hỗ trợ</span>
-                  </a>
-                  <a href="#!" class="dropdown-item">
-                    <i class="ti ti-lock"></i>
-                    <span>Đổi mật khẩu</span>
-                  </a>
-                </div>
-              </div>
             </div>
-          </li>
-        </ul>
+            <div class="flex-grow-1 ms-3">
+                    <h6 class="mb-1">@User.FindFirst("FullName")?.Value</h6>
+                    <span>@(User.IsInRole("Admin") ? "Quản trị viên" : "Nhân viên")</span>
+            </div>
+          </div>
+        </div>
+        
+        <a asp-controller="Account" asp-action="Logout" class="dropdown-item">
+              <i class="ti ti-power"></i>
+          <span>Đăng xuất</span>
+        </a>
       </div>
-    </div>
-  </header>
-  <!-- [ Header ] end -->
+    </li>
+  </ul>
+</div>
+ </div>
+</header>
+<!-- [ Header ] end -->
 
   <!-- [ Main Content ] start -->
   <div class="pc-container">
@@ -239,16 +220,16 @@
   </footer>
 
   <!-- Required Js -->
-  <script src="~/lib/jquery/dist/jquery.min.js"></script>
-  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="~/assets/js/plugins/popper.min.js"></script>
-  <script src="~/assets/js/plugins/simplebar.min.js"></script>
-  <script src="~/assets/js/fonts/custom-font.js"></script>
-  <script src="~/assets/js/pcoded.js"></script>
-  <script src="~/assets/js/plugins/feather.min.js"></script>
+  <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+  <script src="~/assets/js/plugins/popper.min.js" asp-append-version="true"></script>
+  <script src="~/assets/js/plugins/simplebar.min.js" asp-append-version="true"></script>
+  <script src="~/assets/js/fonts/custom-font.js" asp-append-version="true"></script>
+  <script src="~/assets/js/pcoded.js" asp-append-version="true"></script>
+  <script src="~/assets/js/plugins/feather.min.js" asp-append-version="true"></script>
   
   <!-- ApexCharts -->
-  <script src="~/assets/js/plugins/apexcharts.min.js"></script>
+  <script src="~/assets/js/plugins/apexcharts.min.js" asp-append-version="true"></script>
   
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -258,23 +239,15 @@
   
   @await RenderSectionAsync("Scripts", required: false)
   
-  <script>layout_change('light');</script>
-  <script>change_box_container('false');</script>
-  <script>layout_rtl_change('false');</script>
-  <script>preset_change("preset-1");</script>
-  <script>font_change("Public-Sans");</script>
-
-  <!-- JavaScript Files -->
-  <script src="~/assets/js/plugins/apexcharts.min.js"></script>
-  <script src="~/assets/js/plugins/popper.min.js"></script>
-  <script src="~/assets/js/plugins/simplebar.min.js"></script>
-  <script src="~/assets/js/fonts/custom-font.js"></script>
-  <script src="~/assets/js/pcoded.js"></script>
-  <script src="~/assets/js/plugins/feather.min.js"></script>
-  <script src="~/assets/js/pages/dashboard-default.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="~/js/site.js"></script>
+  <script>
+    $(document).ready(function() {
+      layout_change('light');
+      change_box_container('false');
+      layout_rtl_change('false');
+      preset_change("preset-1");
+      font_change("Public-Sans");
+    });
+  </script>
 </body>
 <!-- [Body] end -->
 
