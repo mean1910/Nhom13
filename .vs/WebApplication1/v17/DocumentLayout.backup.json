@@ -1,114 +1,114 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\",
+  "WorkspaceRootPath": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\suppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\suppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\suppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\suppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406141249_them dang nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250406141249_them dang nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\controllers\\warehousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\suppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\suppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\suppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\suppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\ingredientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\suppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\controllers\\warehousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:controllers\\warehousecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\ingredients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\ingredients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\ingredients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\ingredients\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\ingredients\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\ingredients\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\ingredients\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\ingredients\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\ingredients\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250329132408_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250329132408_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250329132408_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250405123745_next.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250405123745_next.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250405123745_next.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250405131450_addimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250405131450_addimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250405131450_addimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250405133758_themkhoangoai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250405133758_themkhoangoai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250405133758_themkhoangoai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250406021925_themquanlykho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250406021925_themquanlykho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250406021925_themquanlykho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250406104818_chinhsualaitoanbo2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250406104818_chinhsualaitoanbo2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250406104818_chinhsualaitoanbo2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\daccvmtpt\\webapplication1\\migrations\\20250406100753_chinhsualaitoanbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250406100753_chinhsualaitoanbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250406100753_chinhsualaitoanbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|c:\\users\\vinh9\\source\\repos\\nhom13\\migrations\\20250406141249_them dang nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6CC92B5-FCED-4B39-8CD4-3EB4B7DD7625}|WebApplication1.csproj|solutionrelative:migrations\\20250406141249_them dang nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,77 +130,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T15:10:32.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Suppliers\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Suppliers\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T14:46:20.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAMwKUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T14:12:03.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T15:10:32.529Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Suppliers\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Details.cshtml",
-              "RelativeToolTip": "Views\\Suppliers\\Details.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T13:36:03.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T14:46:20.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAMwKUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T14:12:03.579Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Suppliers\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Suppliers\\Edit.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Details.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Details.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T13:36:20.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T13:36:03.631Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Suppliers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Suppliers\\Edit.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T13:36:20.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAKUAAAAAAAAAAAAAAKsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-27T11:15:02.222Z",
@@ -208,89 +203,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SuppliersController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\SuppliersController.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\SuppliersController.cs",
               "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\SuppliersController.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\SuppliersController.cs",
               "RelativeToolTip": "Controllers\\SuppliersController.cs",
               "ViewState": "AgIAAJ0AAAAAAAAAAAAUwCEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T09:55:24.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T09:55:24.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "20250406141249_them dang nhap.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406141249_them dang nhap.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406141249_them dang nhap.cs",
               "RelativeDocumentMoniker": "Migrations\\20250406141249_them dang nhap.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406141249_them dang nhap.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406141249_them dang nhap.cs",
               "RelativeToolTip": "Migrations\\20250406141249_them dang nhap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T14:12:50.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T14:12:50.45Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:02:29.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:02:29.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Suppliers\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Create.cshtml",
               "RelativeToolTip": "Views\\Suppliers\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T13:28:23.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T13:28:23.334Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "IngredientsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\IngredientsController.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\IngredientsController.cs",
               "RelativeDocumentMoniker": "Controllers\\IngredientsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\IngredientsController.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\IngredientsController.cs",
               "RelativeToolTip": "Controllers\\IngredientsController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAIAzwCIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:20:51.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:20:51.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-29T13:16:41.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Ingredients\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Details.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Details.cshtml",
               "RelativeToolTip": "Views\\Ingredients\\Details.cshtml",
               "ViewState": "AQIAAC4AAAAAAAAAAAAAAEcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -298,11 +288,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "Supplier.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\Supplier.cs",
               "RelativeDocumentMoniker": "Models\\Supplier.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\Supplier.cs",
               "RelativeToolTip": "Models\\Supplier.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAQwBMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -312,22 +302,21 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Suppliers\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Suppliers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Suppliers\\Index.cshtml",
               "RelativeToolTip": "Views\\Suppliers\\Index.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T13:36:26.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T13:36:26.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Ingredients\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Delete.cshtml",
               "RelativeToolTip": "Views\\Ingredients\\Delete.cshtml",
               "ViewState": "AQIAAFUAAAAAAAAAAAAAAFUAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -335,11 +324,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "WarehouseController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\WarehouseController.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\WarehouseController.cs",
               "RelativeDocumentMoniker": "Controllers\\WarehouseController.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Controllers\\WarehouseController.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Controllers\\WarehouseController.cs",
               "RelativeToolTip": "Controllers\\WarehouseController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -347,11 +336,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Ingredients\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Ingredients\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Ingredients\\Create.cshtml",
               "RelativeToolTip": "Views\\Ingredients\\Create.cshtml",
               "ViewState": "AQIAAB8AAAAAAAAAAAArwDQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -359,11 +348,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Ingredient.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\Ingredient.cs",
               "RelativeDocumentMoniker": "Models\\Ingredient.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Models\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Models\\Ingredient.cs",
               "RelativeToolTip": "Models\\Ingredient.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -371,11 +360,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "20250406104818_chinhsualaitoanbo2.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406104818_chinhsualaitoanbo2.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406104818_chinhsualaitoanbo2.cs",
               "RelativeDocumentMoniker": "Migrations\\20250406104818_chinhsualaitoanbo2.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406104818_chinhsualaitoanbo2.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406104818_chinhsualaitoanbo2.cs",
               "RelativeToolTip": "Migrations\\20250406104818_chinhsualaitoanbo2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -383,11 +372,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "20250406021925_Themquanlykho.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406021925_Themquanlykho.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406021925_Themquanlykho.cs",
               "RelativeDocumentMoniker": "Migrations\\20250406021925_Themquanlykho.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406021925_Themquanlykho.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406021925_Themquanlykho.cs",
               "RelativeToolTip": "Migrations\\20250406021925_Themquanlykho.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -395,11 +384,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "20250406100753_chinhsualaitoanbo.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406100753_chinhsualaitoanbo.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406100753_chinhsualaitoanbo.cs",
               "RelativeDocumentMoniker": "Migrations\\20250406100753_chinhsualaitoanbo.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250406100753_chinhsualaitoanbo.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250406100753_chinhsualaitoanbo.cs",
               "RelativeToolTip": "Migrations\\20250406100753_chinhsualaitoanbo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -407,11 +396,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -419,11 +408,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "20250405133758_themkhoangoai.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405133758_themkhoangoai.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405133758_themkhoangoai.cs",
               "RelativeDocumentMoniker": "Migrations\\20250405133758_themkhoangoai.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405133758_themkhoangoai.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405133758_themkhoangoai.cs",
               "RelativeToolTip": "Migrations\\20250405133758_themkhoangoai.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -431,11 +420,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "20250405131450_addimage.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405131450_addimage.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405131450_addimage.cs",
               "RelativeDocumentMoniker": "Migrations\\20250405131450_addimage.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405131450_addimage.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405131450_addimage.cs",
               "RelativeToolTip": "Migrations\\20250405131450_addimage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -443,11 +432,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "20250405123745_next.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405123745_next.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405123745_next.cs",
               "RelativeDocumentMoniker": "Migrations\\20250405123745_next.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250405123745_next.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250405123745_next.cs",
               "RelativeToolTip": "Migrations\\20250405123745_next.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -455,11 +444,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "20250329132408_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250329132408_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250329132408_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250329132408_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\DACCVMTPT\\WebApplication1\\Migrations\\20250329132408_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\vinh9\\source\\repos\\Nhom13\\Migrations\\20250329132408_InitialCreate.cs",
               "RelativeToolTip": "Migrations\\20250329132408_InitialCreate.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
