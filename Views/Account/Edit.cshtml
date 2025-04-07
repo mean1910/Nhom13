@@ -1,0 +1,124 @@
+@model WebApplication1.Models.User
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin người dùng";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Chỉnh sửa thông tin người dùng</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post" id="editForm">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="Username" />
+                        <input type="hidden" asp-for="CreatedAt" />
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="FullName" class="control-label">Họ và tên</label>
+                                    <input asp-for="FullName" class="form-control" required />
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Email" class="control-label">Email</label>
+                                    <input asp-for="Email" class="form-control" type="email" required />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Phone" class="control-label">Số điện thoại</label>
+                                    <input asp-for="Phone" class="form-control" required />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Role" class="control-label">Vai trò</label>
+                                    <select asp-for="Role" class="form-select" required>
+                                        <option value="Employee">Nhân viên</option>
+                                        <option value="Admin">Quản trị viên</option>
+                                    </select>
+                                    <span asp-validation-for="Role" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Password" class="control-label">Mật khẩu mới (để trống nếu không muốn thay đổi)</label>
+                                    <input asp-for="Password" class="form-control" type="password" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <div class="form-check form-switch">
+                                <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+                                <label asp-for="IsActive" class="form-check-label">Tài khoản hoạt động</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="saveButton">Lưu thay đổi</button>
+                            <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            // Xử lý sự kiện khi form được submit
+            $('#editForm').on('submit', function (e) {
+                e.preventDefault();
+                
+                // Kiểm tra validation
+                if (!this.checkValidity()) {
+                    e.stopPropagation();
+                    $(this).addClass('was-validated');
+                    return false;
+                }
+
+                // Disable nút submit
+                $('#saveButton').prop('disabled', true);
+                
+                // Submit form
+                this.submit();
+            });
+
+            // Xử lý sự kiện khi checkbox IsActive thay đổi
+            $('#IsActive').change(function() {
+                var action = $(this).is(':checked') ? 'mở khóa' : 'khóa';
+                if (!confirm('Bạn có chắc chắn muốn ' + action + ' tài khoản này?')) {
+                    $(this).prop('checked', !$(this).prop('checked'));
+                }
+            });
+
+            // Hiển thị thông báo lỗi
+            $('.text-danger').each(function() {
+                if ($(this).text()) {
+                    $(this).closest('.form-group').addClass('has-error');
+                }
+            });
+        });
+    </script>
+} 

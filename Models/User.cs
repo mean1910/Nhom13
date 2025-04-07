@@ -15,14 +15,17 @@ namespace WebApplication1.Models
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Họ tên không được để trống")]
+        [Required(ErrorMessage = "Họ và tên không được để trống")]
         [Display(Name = "Họ tên")]
         public string FullName { get; set; }
 
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Email không được để trống")]
         [EmailAddress(ErrorMessage = "Email không hợp lệ")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Số điện thoại không được để trống")]
+        [Phone(ErrorMessage = "Số điện thoại không hợp lệ")]
         [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
 

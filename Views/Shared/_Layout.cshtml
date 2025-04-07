@@ -170,9 +170,12 @@
           </div>
         </div>
         
-        <a asp-controller="Account" asp-action="Logout" class="dropdown-item">
-              <i class="ti ti-power"></i>
-          <span>Đăng xuất</span>
+        <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+            <i class="fas fa-user me-2"></i>Thông tin cá nhân
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" asp-controller="Account" asp-action="Logout">
+            <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
         </a>
       </div>
     </li>
