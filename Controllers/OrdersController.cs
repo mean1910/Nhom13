@@ -11,7 +11,7 @@ namespace Nhom13.Controllers
 
         public OrdersController(IMongoDatabase database)
         {
-            _orderCollection = database.GetCollection<Order>("Orders");
+            _orderCollection = database.GetCollection<Order>("orders");
             _productCollection = database.GetCollection<Product>("Products");
         }
 

@@ -32,12 +32,12 @@ builder.Services.AddScoped<DataMigration>(sp =>
 
 var app = builder.Build();
 
-// Run data migration
-/*using (var scope = app.Services.CreateScope())
+// Run data migration and seed sample data
+using (var scope = app.Services.CreateScope())
 {
     var migration = scope.ServiceProvider.GetRequiredService<DataMigration>();
-    await migration.MigrateAllData();
-}*/
+    await migration.SeedSampleData();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

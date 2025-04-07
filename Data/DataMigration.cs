@@ -57,6 +57,8 @@ namespace Nhom13.Data
                     foreach (var item in items)
                     {
                         item.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+                        item.CreatedAt = DateTime.Now.AddDays(-new Random().Next(1, 60)); // Random date in last 60 days
+                        item.IsActive = true;
                     }
                     await collection.InsertManyAsync(items);
                 }
@@ -129,6 +131,115 @@ namespace Nhom13.Data
                     }
                     await collection.InsertManyAsync(items);
                 }
+            }
+        }
+
+        public async Task SeedSampleData()
+        {
+            Console.WriteLine("Seeding sample data...");
+            try
+            {
+                var supplierCollection = _mongoDatabase.GetCollection<Supplier>("suppliers");
+                var count = await supplierCollection.CountDocumentsAsync(FilterDefinition<Supplier>.Empty);
+                
+                if (count == 0)
+                {
+                    var suppliers = new List<Supplier>
+                    {
+                        new Supplier
+                        {
+                            Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                            Name = "Công ty TNHH Thực phẩm ABC",
+                            Address = "123 Nguyễn Văn A, Quận 1, TP.HCM",
+                            Phone = "0123456789",
+                            Email = "abc@food.com",
+                            Note = "Nhà cung cấp thực phẩm chính",
+                            CreatedAt = DateTime.Now.AddDays(-30),
+                            IsActive = true
+                        },
+                        new Supplier
+                        {
+                            Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                            Name = "Công ty CP Thực phẩm XYZ",
+                            Address = "456 Lê Văn B, Quận 2, TP.HCM",
+                            Phone = "0987654321",
+                            Email = "xyz@food.com",
+                            Note = "Nhà cung cấp gia vị",
+                            CreatedAt = DateTime.Now.AddDays(-15),
+                            IsActive = true
+                        },
+                        new Supplier
+                        {
+                            Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                            Name = "Công ty TNHH Rau củ quả Sạch",
+                            Address = "789 Trần Văn C, Quận 3, TP.HCM",
+                            Phone = "0369852147",
+                            Email = "fresh@veggie.com",
+                            Note = "Nhà cung cấp rau củ",
+                            CreatedAt = DateTime.Now.AddDays(-7),
+                            IsActive = true
+                        }
+                    };
+
+                    await supplierCollection.InsertManyAsync(suppliers);
+                    Console.WriteLine($"Added {suppliers.Count} sample suppliers");
+
+                    // Thêm sản phẩm mẫu
+                    var productCollection = _mongoDatabase.GetCollection<Product>("products");
+                    var productCount = await productCollection.CountDocumentsAsync(FilterDefinition<Product>.Empty);
+
+                    if (productCount == 0)
+                    {
+                        var products = new List<Product>
+                        {
+                            new Product
+                            {
+                                Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                                Name = "Thịt bò Úc",
+                                Description = "Thịt bò nhập khẩu từ Úc, đảm bảo chất lượng",
+                                Price = 350000,
+                                Quantity = 100,
+                                SupplierId = suppliers[0].Id,
+                                SupplierName = suppliers[0].Name,
+                                CreatedDate = DateTime.Now.AddDays(-20),
+                                CreatedBy = "Admin"
+                            },
+                            new Product
+                            {
+                                Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                                Name = "Gia vị lẩu Thái",
+                                Description = "Gia vị ướp lẩu Thái chuẩn vị",
+                                Price = 45000,
+                                Quantity = 200,
+                                SupplierId = suppliers[1].Id,
+                                SupplierName = suppliers[1].Name,
+                                CreatedDate = DateTime.Now.AddDays(-15),
+                                CreatedBy = "Admin"
+                            },
+                            new Product
+                            {
+                                Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString(),
+                                Name = "Rau cải thìa",
+                                Description = "Rau cải thìa tươi sạch",
+                                Price = 15000,
+                                Quantity = 300,
+                                SupplierId = suppliers[2].Id,
+                                SupplierName = suppliers[2].Name,
+                                CreatedDate = DateTime.Now.AddDays(-10),
+                                CreatedBy = "Admin"
+                            }
+                        };
+
+                        await productCollection.InsertManyAsync(products);
+                        Console.WriteLine($"Added {products.Count} sample products");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error seeding data: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                throw;
             }
         }
     }

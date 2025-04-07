@@ -17,9 +17,9 @@ namespace Nhom13.Controllers
         {
             _logger = logger;
             _database = database;
-            _orderCollection = database.GetCollection<Order>("Orders");
-            _productCollection = database.GetCollection<Product>("Products");
-            _supplierCollection = database.GetCollection<Supplier>("Suppliers");
+            _orderCollection = database.GetCollection<Order>("orders");
+            _productCollection = database.GetCollection<Product>("products");
+            _supplierCollection = database.GetCollection<Supplier>("suppliers");
         }
 
         public async Task<IActionResult> Index()
