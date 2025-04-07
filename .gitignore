@@ -6,9 +6,9 @@
 *.sln.docstates
 
 # Build
-bin/
-obj/
-out/
+#bin/
+#obj/
+#out/
 
 # ASP.NET Core
 appsettings*.json
