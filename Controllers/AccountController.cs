@@ -91,6 +91,12 @@ namespace WebApplication1.Controllers
                     return View(user);
                 }
 
+                if (string.IsNullOrEmpty(user.Password))
+                {
+                    ModelState.AddModelError("Password", "Mật khẩu không được để trống");
+                    return View(user);
+                }
+
                 user.CreatedAt = DateTime.Now;
                 user.IsActive = true;
                 user.Role = "Employee"; // Mặc định là nhân viên
@@ -140,8 +146,18 @@ namespace WebApplication1.Controllers
             {
                 try
                 {
-                    _context.Update(user);
+                    var existingUser = await _context.Users.FindAsync(id);
+                    if (existingUser == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Chỉ cho phép thay đổi vai trò và trạng thái
+                    existingUser.Role = user.Role;
+                    existingUser.IsActive = user.IsActive;
+
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -154,9 +170,148 @@ namespace WebApplication1.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(user);
+        }
+
+        // GET: Account/Profile
+        [Authorize]
+        public async Task<IActionResult> Profile()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // POST: Account/Profile
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> Profile(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var existingUser = await _context.Users.FindAsync(user.Id);
+                    if (existingUser == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Kiểm tra mật khẩu
+                    if (string.IsNullOrEmpty(user.Password))
+                    {
+                        ModelState.AddModelError("Password", "Mật khẩu không được để trống");
+                        return View(user);
+                    }
+
+                    // Cập nhật thông tin cá nhân
+                    existingUser.FullName = user.FullName;
+                    existingUser.Email = user.Email;
+                    existingUser.Phone = user.Phone;
+                    existingUser.Password = user.Password;
+
+                    await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Cập nhật thông tin thành công";
+                    return RedirectToAction(nameof(Profile));
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UserExists(user.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return View(user);
+        }
+
+        // GET: Account/ChangePassword
+        [Authorize]
+        public async Task<IActionResult> ChangePassword()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // POST: Account/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> ChangePassword(int id, string currentPassword, string password, string confirmPassword)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            if (user.Password != currentPassword)
+            {
+                TempData["ErrorMessage"] = "Mật khẩu hiện tại không đúng";
+                return View(user);
+            }
+
+            if (password != confirmPassword)
+            {
+                TempData["ErrorMessage"] = "Mật khẩu mới và xác nhận mật khẩu không khớp";
+                return View(user);
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                TempData["ErrorMessage"] = "Mật khẩu mới không được để trống";
+                return View(user);
+            }
+
+            user.Password = password;
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Đổi mật khẩu thành công";
+            return RedirectToAction(nameof(ChangePassword));
+        }
+
+        // POST: Account/ToggleStatus/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ToggleStatus(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.IsActive = !user.IsActive;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         private bool UserExists(int id)
