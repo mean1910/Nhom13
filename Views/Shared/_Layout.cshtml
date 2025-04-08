@@ -90,14 +90,8 @@
         </li>
         <li class="pc-item">
             <a asp-controller="Ingredients" asp-action="Index" class="pc-link">
-              <span class="pc-micon"><i class="ti ti-truck"></i></span>
-              <span class="pc-mtext">Nguyên liệu</span>
-          </a>
-        </li>
-        <li class="pc-item">
-            <a asp-controller="Products" asp-action="Index" class="pc-link">
               <span class="pc-micon"><i class="ti ti-box"></i></span>
-              <span class="pc-mtext">Sản phẩm</span>
+              <span class="pc-mtext">Nguyên liệu</span>
           </a>
         </li>
         <li class="pc-item">
@@ -112,19 +106,12 @@
               <span class="pc-mtext">Kho</span>
           </a>
         </li>
-        @if (User.IsInRole("Admin"))
-        {
-        <li class="pc-item pc-caption">
-                <label>Hệ thống</label>
-                <i class="ti ti-settings"></i>
-        </li>
-        <li class="pc-item">
-                <a asp-controller="Account" asp-action="Index" class="pc-link">
-                    <span class="pc-micon"><i class="ti ti-users"></i></span>
-                    <span class="pc-mtext">Quản lý người dùng</span>
-          </a>
-        </li>
-        }
+                    <li class="pc-item">
+                        <a asp-controller="Expense" asp-action="Index" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-cash"></i></span>
+                            <span class="pc-mtext">Quản lý chi tiêu</span>
+                        </a>
+                    </li>
       </ul>
     </div>
   </div>
@@ -170,9 +157,21 @@
           </div>
         </div>
         
-        <a asp-controller="Account" asp-action="Logout" class="dropdown-item">
-              <i class="ti ti-power"></i>
-          <span>Đăng xuất</span>
+        @if (User.IsInRole("Admin"))
+        {
+            <a href="@Url.Action("Index", "Account")" class="dropdown-item">
+                <i class="ti ti-users"></i>
+                <span>Quản lý người dùng</span>
+            </a>
+            <a href="@Url.Action("Register", "Account")" class="dropdown-item">
+                <i class="ti ti-user-plus"></i>
+                <span>Thêm người dùng</span>
+            </a>
+            <div class="dropdown-divider"></div>
+        }
+        <a href="@Url.Action("Logout", "Account")" class="dropdown-item">
+            <i class="ti ti-power"></i>
+            <span>Đăng xuất</span>
         </a>
       </div>
     </li>
